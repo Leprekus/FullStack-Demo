@@ -1,6 +1,15 @@
 import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
+//mocks state
+const people = {
+  name: 'Seline Doe',
+  role: 'Fullstack Developer',
+  imageURL: 'https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg',
+  twitterURL: '#',
+  linkedInURL: '#',
+}
+
 const TeamPage = () => {
   return (
     <>
@@ -14,6 +23,25 @@ const TeamPage = () => {
         My default route is named <code>team</code>, link to me with `
         <Link to={routes.team()}>Team</Link>`
       </p>
+
+      <div className="bg-white">
+        <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
+          <div className="space-y-12">
+            <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
+              <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+                Our Team
+              </h2>
+              <p className="text-xl text-gray-500">
+                Odio nisi, lectus dis nulla. Ultrices maecenas vitae rutrum
+                dolor ultricies donec risus sodales. Tempus quis et.
+              </p>
+            </div>
+            <TeamMembersCell />
+          </div>
+        </div>
+      </div>
+
+
     </>
   )
 }
