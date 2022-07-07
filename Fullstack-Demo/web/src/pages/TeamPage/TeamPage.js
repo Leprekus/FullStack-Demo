@@ -1,14 +1,6 @@
 import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
-
-//mocks state
-const people = {
-  name: 'Seline Doe',
-  role: 'Fullstack Developer',
-  imageURL: 'https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg',
-  twitterURL: '#',
-  linkedInURL: '#',
-}
+import TeamMembersCell from '../../components/TeamMembersCell'
 
 const TeamPage = () => {
   return (
